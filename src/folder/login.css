@@ -1,0 +1,34 @@
+.Btn-login{
+    background-color:black ;
+    color: antiquewhite;
+    width: 150px;
+    height: 40px;
+    margin-top: 15px;
+}
+.main-text{
+    margin-left: 60px;
+   font-size: 50px;
+}
+
+.email-input{
+    width: 200px;
+}
+.password-input{
+    width: 200px;
+    margin-top: 10px;
+}
+.main-div{
+background-color: cadetblue;
+width: 400px;
+height: 300px;
+margin-left: 400px;
+margin-top: 10px;
+}
+.login-container{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.logout-btn{
+    background-color: black;
+    color: antiquewhite;
+}

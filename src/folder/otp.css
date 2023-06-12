@@ -1,0 +1,31 @@
+
+.mainotpdiv{
+position: relative;
+padding: 0px;
+
+
+
+}
+
+.Otpdiv{
+
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    align-items: center;
+    left: 400px;
+    top:50px;
+    background-color:darkgrey;
+
+}
+.otpinput{
+    position: relative;
+    left: 80px;
+}
+.otpbtn{
+
+    margin-top: 20px;
+}

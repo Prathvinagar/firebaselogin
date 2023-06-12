@@ -1,0 +1,116 @@
+.maindiv{
+
+    position: relative;
+    padding:0px;
+  
+}
+.headingsignup{
+    padding-left: 250px;
+}
+
+.formdiv{
+
+    height: 600px;
+    width: 700px;
+    border: 1px solid black;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+.containerdiv{
+
+    padding-top: 30px;
+}
+
+.firstdiv{
+
+
+     display: flex;
+    
+    
+}
+.secdiv,.fourthdiv , .thirddiv{
+
+    display: flex;
+    
+}
+.firtstext{
+padding-left: 10px;
+
+}
+
+.lasttext{
+
+padding-left: 50px;
+
+}
+.mailtext{
+
+padding-left: 43px;
+
+
+}
+.mobtext{
+
+    padding-left: 50px;
+ 
+}
+
+.countrytext{
+    padding-left: 24px;
+}
+.stattext{
+    padding-left: 74px;
+  
+  
+}
+.citytext{
+    padding-left: 55px;
+}
+.pintext{
+    padding-left:60px;
+
+}
+
+.otp-btn{
+width: 150px;
+height: 50px;
+position: relative;
+display: flex;
+flex-direction: row;
+left:250px;
+top:100px;
+padding-left: 30px;
+padding-top: 13px;
+background-color: black;
+color: bisque;
+
+}
+
+
+.dropdown{
+width: 200px;
+height: 40px;
+ border: 1px solid black;
+}
+.inputfield{
+
+   
+    width: 200px;
+}
+.inputfieldmob{
+    width: 150px;
+}
+.inputfieldstates{
+    width: 210px;
+}
+.inputfieldcountry{
+    width: 210px;
+}
+.inputfieldcity {
+
+    width: 210px;
+}
+.passtext{
+    padding-left: 50px;
+   
+}
