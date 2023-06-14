@@ -2,24 +2,25 @@ import React from "react";
 import "./login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { app } from "./firebase";
 import { useEffect, ref } from "react";
 import { ref as fireRef, child, get } from "firebase/database";
 import { database as db } from "./firebase";
 import { enc, SHA256 } from "crypto-js";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
-  };
 
   const fetchData = async () => {
     const dbRef = fireRef(db);
@@ -37,6 +38,7 @@ function Login() {
 
           if (search && search.password === encrypted) {
             navigate("/home");
+            console.log("login user");
           }
         } else {
           console.log("No data available");
@@ -63,7 +65,18 @@ function Login() {
   const handleSignupPhoneno = (e) => {
     navigate("/loginphone");
   };
+  const googleSignup = (e) => {
+    e.preventDefault();
 
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        console.log("login user")
+        // navigate('./home');
+      })
+      .catch((error) => {
+        console.log("error")
+      });
+  };
   return (
     <div className="main-div">
       <form onSubmit={(e) => findUserByEmail(e, email)}>
@@ -82,8 +95,7 @@ function Login() {
             className="password-input"
             placeholder="Password"
             value={password}
-            // onChange={(e) => setPassword(e.target.value)}
-            onChange={handlePassword}
+            onChange={(e) => setPassword(e.target.value)}
           ></input>
           <br />
 
@@ -96,6 +108,10 @@ function Login() {
           <p style={{ fontSize: "14px" }} onClick={handleSignupPhoneno}>
             Login with Phone.no
           </p>
+          <FacebookIcon />
+          <InstagramIcon />
+          <GoogleIcon onClick={googleSignup} />
+          <TwitterIcon />
         </div>
       </form>
     </div>

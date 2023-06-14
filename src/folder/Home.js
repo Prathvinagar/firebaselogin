@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import { useNavigate ,Navigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function ButtonAppBar() {
