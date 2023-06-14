@@ -167,12 +167,12 @@ const Signup = () => {
     let encrypted = SHA256(password).toString();
     console.log("Hashing password " + encrypted);
   
-   const  validate =createUserWithEmailAndPassword(auth,  email,  password)
+   const  validate =createUserWithEmailAndPassword(auth,  email,  password, mobile)
     console.log('validate', validate)
     if (encrypted !== undefined) {
 
       const data = { email: email,
-        password: encrypted,};
+        password: encrypted,mobile};
       
       const res = await set(ref(db, `users/` + firstname ), data);
         console.log(res,":::::::")
